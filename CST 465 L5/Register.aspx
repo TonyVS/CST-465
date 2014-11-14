@@ -1,20 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CST_465_L5.Register" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Register User</title>
-</head>
-<body>
-    <h1>Register User</h1>
-    <form id="form1" runat="server">
-    <div>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CST_465_L5.Register" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <title>Register</title>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Register</h1>
     <asp:CreateUserWizard MembershipProvider="SqlMembership" ContinueDestinationPageUrl="~/Login.aspx" runat="server">
     </asp:CreateUserWizard>
-
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>

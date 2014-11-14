@@ -40,7 +40,7 @@ public partial class EditYourProfile : System.Web.UI.Page
         uxEventOutput.Text += submitString;
 
         Session["UserData"] = userData;
-        Response.Redirect("/ViewYourProfile.aspx");
+        Response.Redirect("~/Account/ViewYourProfile.aspx");
     }
     protected void Page_Init(object sender, EventArgs e)
     {

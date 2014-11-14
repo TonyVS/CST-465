@@ -1,20 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CST_465_L5.Login" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CST_465_L5.Login" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <title>Login</title>
-</head>
-<body>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Login</h1>
-    <form id="form1" runat="server">
-    <div>
-    
-        <asp:Login MembershipProvider="SqlMembership" CreateUserText="Register" ContinueDestinationPageUrl="~/EditYourProfile.aspx" CreateUserUrl="~/Register.aspx" runat="server">
-        </asp:Login>
-
-    </div>
-    </form>
-</body>
-</html>
+    <asp:Login MembershipProvider="SqlMembership" CreateUserText="Register" ContinueDestinationPageUrl="~/EditYourProfile.aspx" CreateUserUrl="~/Register.aspx" runat="server">
+    </asp:Login>
+</asp:Content>
