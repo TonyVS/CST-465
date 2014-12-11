@@ -16,6 +16,12 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <asp:ScriptManager ID="uxScriptManager" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="Scripts/jquery-1.11.1.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
         <asp:SiteMapDataSource ID="uxSiteMap" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server"/>
         <asp:Menu ID="uxMenu" BorderColor="WindowFrame" BorderStyle="Ridge" DataSourceID="uxSiteMap" runat="server"/>
         <asp:SiteMapPath PathSeparator="|" runat="server"/>
