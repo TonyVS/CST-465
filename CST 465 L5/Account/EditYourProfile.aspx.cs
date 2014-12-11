@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Lab5;
 
 public partial class EditYourProfile : System.Web.UI.Page
 {
@@ -15,6 +16,8 @@ public partial class EditYourProfile : System.Web.UI.Page
     {
         ProfileData userData;
         userData = new ProfileData();
+        ProfilePersistance profile = new ProfilePersistance();
+
 
         userData.Name = uxName.Text;
         userData.Email = uxEmail.Text;
@@ -22,25 +25,27 @@ public partial class EditYourProfile : System.Web.UI.Page
         userData.Hobby = uxHobby.Text;
         userData.Band = uxBand.Text;
         userData.Biography = uxBiography.Text;
-        userData.CoursePrefix = uxCoursePrefix.Text;
-        userData.CourseNumber = uxCourseNumber.Text;
-        userData.CourseDescription = uxCourseDescription.Text;
+        //userData.CoursePrefix = uxCoursePrefix.Text;
+        //userData.CourseNumber = uxCourseNumber.Text;
+        //userData.CourseDescription = uxCourseDescription.Text;
 
-        string submitString = "Submit String ";
-        submitString += " Name = ";
-        submitString += uxName.Text;
-        submitString += " Type = ";
-        submitString += uxUserType.Text;
-        submitString += " Hobby = ";
-        submitString += uxHobby.Text;
-        submitString += " Band = ";
-        submitString += uxBand.Text;
-        submitString += " Biography = ";
-        submitString += uxBiography.Text;
-        uxEventOutput.Text += submitString;
+        profile.SaveProfile(userData);
 
-        Session["UserData"] = userData;
-        Response.Redirect("~/Account/ViewYourProfile.aspx");
+        //string submitString = "Submit String ";
+        //submitString += " Name = ";
+        //submitString += uxName.Text;
+        //submitString += " Type = ";
+        //submitString += uxUserType.Text;
+        //submitString += " Hobby = ";
+        //submitString += uxHobby.Text;
+        //submitString += " Band = ";
+        //submitString += uxBand.Text;
+        //submitString += " Biography = ";
+        //submitString += uxBiography.Text;
+        //uxEventOutput.Text += submitString;
+
+        //Session["UserData"] = userData;
+        //Response.Redirect("~/Account/ViewYourProfile.aspx");
     }
     protected void Page_Init(object sender, EventArgs e)
     {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Lab5;
 
 public partial class ViewYourProfile : System.Web.UI.Page
 {
@@ -12,23 +13,19 @@ public partial class ViewYourProfile : System.Web.UI.Page
         ProfileData userData;
         userData = new ProfileData();
 
-        userData = (ProfileData)Session["userData"];
+        ProfilePersistance profile = new ProfilePersistance();
+        userData = profile.LoadProfile();
+
+        //userData = (ProfileData)Session["userData"];
 
         uxName.Text = userData.Name;
         uxEmail.Text = userData.Email;
-        if(userData.UserType.Equals("1"))
-        {
-            uxUserType.Text = "student";
-        }
-        else 
-        {
-            uxUserType.Text = "faculty";
-        }
+        uxUserType.Text = userData.UserType;
         uxHobby.Text = userData.Hobby;
         uxBand.Text = userData.Band ;
         uxBiography.Text = userData.Biography;
-        uxCoursePrefix.Text = userData.CoursePrefix;
-        uxCourseNumber.Text = userData.CourseNumber;
-        uxCourseDescription.Text = userData.CourseDescription;
+        //uxCoursePrefix.Text = userData.CoursePrefix;
+        //uxCourseNumber.Text = userData.CourseNumber;
+        //uxCourseDescription.Text = userData.CourseDescription;
     }
 }

@@ -27,9 +27,9 @@
 
     <asp:Label ID="uxUserTypeLabel" AssociatedControlID="uxUserType" Text="User Type" runat="server">
         <asp:DropDownList ID="uxUserType" runat="server">
-            <asp:ListItem Value="0">--Select</asp:ListItem>
-            <asp:ListItem Enabled="true" Text="Student" Value="1"></asp:ListItem>
-            <asp:ListItem Text="Faculty/Staff" Value="2"></asp:ListItem>
+            <asp:ListItem >--Select</asp:ListItem>
+            <asp:ListItem Enabled="true" Text="Student" Value="Student"></asp:ListItem>
+            <asp:ListItem Text="Faculty/Staff" Value="Faculty/Staff"></asp:ListItem>
         </asp:DropDownList>
     </asp:Label>
     <asp:RequiredFieldValidator ControlToValidate="uxUserType" InitialValue="0" ValidationGroup="ProfileValidation" ErrorMessage="User Type" runat="server" />
@@ -53,7 +53,7 @@
     <asp:RequiredFieldValidator ControlToValidate="uxBiography" ValidationGroup="ProfileValidation" ErrorMessage="Biography" runat="server" />
     <br />
 
-    <asp:Label ID="uxTableLabel" AssociatedControlID="uxTable" Text="Table" runat="server">
+<%--    <asp:Label ID="uxTableLabel" AssociatedControlID="uxTable" Text="Table" runat="server">
         <asp:Table ID="uxTable" runat="server">
             <asp:TableHeaderRow ID="uxTableRowHeader" runat="server">
                 <asp:TableHeaderCell>Course Prefix</asp:TableHeaderCell>
@@ -82,7 +82,7 @@
             </asp:TableRow>
         </asp:Table>
     </asp:Label>
-    <br />
+    <br />--%>
 
     <asp:Label ID="uxSubmitLabel" AssociatedControlID="uxSubmit" Text="Save" runat="server">
         <asp:Button ValidationGroup="ProfileValidation" ID="uxSubmit" Text="Save Profile" OnClick="uxSubmit_Click" runat="server" />

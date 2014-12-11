@@ -24,11 +24,11 @@
     <br />
     <span class="Biography">Biography:</span><asp:Literal ID="uxBiography" runat="server" />
     <br />
-    <span class="CoursePrefix">Course Prefix:</span><asp:Literal ID="uxCoursePrefix" runat="server" />
+<%--    <span class="CoursePrefix">Course Prefix:</span><asp:Literal ID="uxCoursePrefix" runat="server" />
     <br />
     <span class="CourseNumber">Course Number:</span><asp:Literal ID="uxCourseNumber" runat="server" />
     <br />
-    <span class="CourseDescription">Course Description:</span><asp:Literal ID="uxCourseDescription" runat="server" />
+    <span class="CourseDescription">Course Description:</span><asp:Literal ID="uxCourseDescription" runat="server" />--%>
     <br />
 </asp:Content>
 
